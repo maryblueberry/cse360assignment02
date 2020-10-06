@@ -13,63 +13,68 @@ package cse360assignment02;
 	 * 
 	 */
 
-	public class AddingMachine {
+public class AddingMachine {
 
-			  private int total;
-			  
-			  /** 
-			   *  This method is used to implement the variable total 
-			   *  
-			   */
-			  public AddingMachine () 
-			  {
-			    total = 0;  // not needed - included for clarity
-			  }
-			  
-			  /**
-			   * This method is used to get the total amount  
-			   * @return 0 
-			   */
-			  public int getTotal () 
-			  {
-			    return 0;
-			  }
-			  
-			  /** 
-			  * This method is used to conduct addition 
-			  * @param value This is the first parameter to the add method
-			  * @return Nothing 
-			  */
-			  public void add (int value) 
-			  {
-				  
-			  }
+	  private int total;
+	  private String transactions;
+	  
+	  /** 
+	   *  This method is used to implement the variables total and transactions 
+	   *  
+	   */
+	  public AddingMachine () 
+	  {
+	    total = 0;  
+	    transactions = "0";
+	  }
+	  
+	  /**
+	   * This method is used to get the total amount  
+	   * @return total
+	   */
+	  public int getTotal () 
+	  {
+	    return total;
+	  }
+	  
+	  /** 
+	  * This method is used to conduct addition 
+	  * @param value This is the first parameter to the add in order to get the total
+	  * 
+	  */
+	  public void add (int value) 
+	  {
+		total = total + value;
+		transactions = transactions + " + " + value; 
+	  }
 
-			  /**
-			  * This method is used to conduct subtraction with the value parameter 
-			  * @param value This is the first parameter to the subtract method
-			  * @return Nothing
-			  */
-			  public void subtract (int value) 
-			  {
-				  
-			  }
+	  /**
+	  * This method is used to conduct subtraction with the value parameter 
+	  * @param value This is the first parameter to the subtract in order to get the total
+	  * 
+	  */
+	  public void subtract (int value) 
+	  {
+		total = total - value;
+		transactions = transactions + " - " + value;
+	  }
 
-			  /**
-			  * This method is used to return the String
-			  * @return 
-			  */
-			  public String toString () 
-			  {
-			    return "";
-			  }
-			  
-			  /** 
-			  * This method is used to clear the memory
-			  * @return Nothing
-			  */
-			  public void clear() 
-			  {
-				  
-			  }
+	  /**
+	  * This method is used to return and display the history
+	  * @return history
+	  */
+	  public String toString () 
+	  {
+	    return transactions;
+	  }
+	  
+	  /** 
+	  * This method is used to clear the memory
+	  * 
+	  */
+	  public void clear() 
+	  {
+		total = 0;
+		transactions = "0";
+	  }	 
 }
